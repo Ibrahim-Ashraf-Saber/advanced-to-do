@@ -10,6 +10,7 @@ function Navbar() {
   const [isOpenDialog, setisOpenDialog] = useState(false);
   const { darkMode, setDarkMode } = useDarkMode();
   const { isAuth } = useAuth();
+  const hasRefreshToken = localStorage.getItem("isAuth");
 
   return (
     <nav className="flex justify-between items-center px-6 md:px-10 py-6 shadow-md bg-white dark:bg-gray-950 text-gray-800 dark:text-gray-200 relative z-50">
@@ -45,7 +46,7 @@ function Navbar() {
           </NavLink>
         </li>
         <li className="flex items-center gap-5">
-          {isAuth ? (
+          {isAuth || hasRefreshToken ? (
             <Profile />
           ) : (
             <Link
@@ -106,7 +107,7 @@ function Navbar() {
               </NavLink>
             </li>
             <li>
-              {isAuth ? (
+              {isAuth || hasRefreshToken ? (
                 <Profile />
               ) : (
                 <Link
