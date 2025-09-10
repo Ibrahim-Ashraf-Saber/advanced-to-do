@@ -57,10 +57,10 @@ export default function ProfileDialog({ isOpenDialog, closeDialog }) {
                   className="w-20 h-20 rounded-full border border-blue-500 p-1 object-cover"
                 />
                 <h2 className="text-lg font-semibold text-gray-700 dark:text-gray-200">
-                  {user.name}
+                  {user?.name}
                 </h2>
                 <p className="text-sm text-gray-500 dark:text-gray-400">
-                  {user.email}
+                  {user?.email}
                 </p>
               </div>
 
