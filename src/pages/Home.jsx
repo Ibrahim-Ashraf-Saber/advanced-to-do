@@ -5,11 +5,11 @@ import img from "../assets/landing.svg";
 
 function Home() {
   return (
-    <div className="flex flex-col min-h-screen bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100">
+    <div className="flex flex-col min-h-dvh bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100">
       <Navbar />
 
-      <main className="flex-1 flex flex-col-reverse lg:flex-row items-center justify-between px-6 sm:px-10 lg:px-16 gap-10 lg:ml-20">
-        <div className="flex-1 flex flex-col gap-5 text-center lg:text-left">
+      <main className="flex-1 flex flex-col-reverse lg:flex-row items-center justify-center lg:justify-between px-6 sm:px-10 lg:px-16 gap-10 lg:ml-20">
+        <div className="lg:flex-1 flex flex-col gap-5 text-center lg:text-left">
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight">
             <span className="text-blue-500">TO</span>
             <span className="text-gray-800 dark:text-gray-100">DO</span> App
@@ -20,7 +20,7 @@ function Home() {
           </p>
           <Link
             to="dashboard"
-            className="w-fit mx-auto mb-5 lg:mx-0 mt-6 px-6 sm:px-8 py-3 bg-blue-500 hover:bg-blue-600 text-white text-sm sm:text-base md:text-lg rounded-xl shadow-md transition"
+            className="w-fit mx-auto lg:mx-0 mt-6 px-6 sm:px-8 py-3 bg-blue-500 hover:bg-blue-600 text-white text-sm sm:text-base md:text-lg rounded-xl shadow-md transition"
           >
             Start Now
           </Link>

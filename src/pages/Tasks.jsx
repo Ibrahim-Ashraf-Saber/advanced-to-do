@@ -18,7 +18,7 @@ function Tasks() {
   }, [getTasks]);
 
   return (
-    <div className="flex relative flex-col min-h-screen">
+    <div className="flex relative flex-col min-h-dvh">
       <Navbar />
 
       <main className="flex-1 bg-gray-50 dark:bg-gray-900 py-10 px-4 sm:px-6 lg:px-8">

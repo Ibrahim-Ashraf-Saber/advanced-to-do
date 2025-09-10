@@ -29,7 +29,7 @@ function Signup() {
   }, [isAuth, navigate]);
 
   return (
-    <div className=" flex relative flex-col min-h-screen bg-gray-100 dark:bg-gray-900 transition-colors duration-300">
+    <div className=" flex relative flex-col min-h-dvh bg-gray-100 dark:bg-gray-900 transition-colors duration-300">
       <Navbar />
 
       {loading && <Loader />}
