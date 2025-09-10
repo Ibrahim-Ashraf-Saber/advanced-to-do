@@ -44,18 +44,21 @@ function TaskItem({ task }) {
   return (
     <div
       className={`p-5 rounded-2xl shadow-md flex flex-col justify-between gap-3 transition hover:scale-[1.02]
-                  ${
-                    task.completed
-                      ? "bg-green-50 border border-green-300"
-                      : "bg-yellow-50 border border-yellow-300"
-                  }
-                `}
+        ${
+          task.completed
+            ? "bg-green-50 border border-green-300 dark:bg-green-900 dark:border-green-700"
+            : "bg-yellow-50 border border-yellow-300 dark:bg-yellow-900 dark:border-yellow-700"
+        }
+      `}
     >
       <div className="flex items-center justify-between">
         <h3
-          className={`font-semibold text-lg truncate ${
-            task.completed ? "line-through text-gray-500" : "text-gray-800"
-          }`}
+          className={`font-semibold text-lg truncate
+            ${
+              task.completed
+                ? "line-through text-gray-500 dark:text-gray-400"
+                : "text-gray-800 dark:text-gray-200"
+            }`}
         >
           {task.title}
         </h3>
@@ -72,22 +75,22 @@ function TaskItem({ task }) {
         {task.description}
       </p>
 
-      <div className="flex justify-end items-center text-xs text-gray-500">
+      <div className="flex justify-end items-center text-xs text-gray-500 dark:text-gray-400">
         <span>Created: {new Date(task.createdAt).toLocaleDateString()}</span>
       </div>
 
       <div className="flex justify-between items-center mt-2">
         {task.completed ? (
-          <FaCheckCircle className="text-green-600 text-2xl" />
+          <FaCheckCircle className="text-green-600 dark:text-green-400 text-2xl" />
         ) : (
-          <FaClock className="text-yellow-500 text-2xl" />
+          <FaClock className="text-yellow-500 dark:text-yellow-400 text-2xl" />
         )}
 
         <div className="flex gap-2">
           <div>
             <button
               onClick={() => setisOpenDialog(true)}
-              className="p-1 text-blue-600 hover:text-blue-800 cursor-pointer"
+              className="p-1 text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-200 cursor-pointer"
             >
               <AiOutlineEdit size={18} />
             </button>
@@ -100,7 +103,7 @@ function TaskItem({ task }) {
           </div>
           <button
             onClick={() => handleDelete(task.id)}
-            className="p-1 text-red-600 hover:text-red-800 cursor-pointer"
+            className="p-1 text-red-600 hover:text-red-800 dark:text-red-400 dark:hover:text-red-200 cursor-pointer"
           >
             <AiOutlineDelete size={18} />
           </button>
